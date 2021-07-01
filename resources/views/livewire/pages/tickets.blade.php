@@ -4,15 +4,11 @@
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group me-2">
                 <button type="button" class="btn btn-sm btn-outline-secondary">
-                    Compartir
-                </button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">
                     Exportar
                 </button>
             </div>
-            <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                <span class="calendar"></span>
-                Esta semana
+            <button type="button" class="btn btn-sm btn-outline-secondary">
+                Añadir
             </button>
         </div>
     </div>
@@ -20,6 +16,7 @@
         <table class="table table-dark table-striped">
             <thead>
                 <tr>
+                    <th scope="col">Id</th>
                     <th scope="col">F. Compra</th>
                     <th scope="col">Establecimiento</th>
                     <th scope="col">Nº Productos</th>
@@ -27,13 +24,35 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>random</td>
-                    <td>data</td>
-                    <td>placeholder</td>
-                    <td>text</td>
-                </tr>
+                @foreach ($tickets as $ticket)
+                    <tr>
+                        <td>{{$ticket->id}}</td>
+                        <td>{{$ticket->fechaCompra}}</td>
+                        <td>{{$ticket->establecimiento->nombre}}</td>
+                        <td>
+                        {{
+                            $ticket->productos->sum(function ($producto) {
+                                return $producto->pivot->cantidad;
+                            })
+                        }}
+                        </td>
+                        <td>
+                        
+                        {{
+                            number_format(
+                                $ticket->productos->sum(function ($producto) {
+                                    return $producto->pivot->precio;
+                                }),
+                                2,
+                                ',',
+                                '.'
+                            )
+                        }}€
+                        </td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
+        {{ $tickets->links() }}
     </div>
 </div>
