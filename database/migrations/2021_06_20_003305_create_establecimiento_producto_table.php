@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateEstablecimientoProductoTable extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -31,4 +32,5 @@ class CreateEstablecimientoProductoTable extends Migration
     {
         Schema::dropIfExists('establecimiento_producto');
     }
+
 }

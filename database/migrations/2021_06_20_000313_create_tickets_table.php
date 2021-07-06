@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateTicketsTable extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -15,7 +16,8 @@ class CreateTicketsTable extends Migration
     {
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
-            $table->dateTime('fechaCompra');
+            $table->dateTime('fecha_compra');
+            $table->dateTime('imagen');
             $table->foreignId('establecimiento_id')->constrained();
             $table->timestamps();
             $table->softDeletes();
@@ -31,4 +33,5 @@ class CreateTicketsTable extends Migration
     {
         Schema::dropIfExists('tickets');
     }
+
 }

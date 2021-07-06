@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateCategoriasTable extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -30,4 +31,5 @@ class CreateCategoriasTable extends Migration
     {
         Schema::dropIfExists('categorias');
     }
+
 }

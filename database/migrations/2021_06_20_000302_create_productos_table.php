@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateProductosTable extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -16,7 +17,6 @@ class CreateProductosTable extends Migration
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 255);
-            $table->foreignId('categoria_id')->constrained();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -31,4 +31,5 @@ class CreateProductosTable extends Migration
     {
         Schema::dropIfExists('productos');
     }
+
 }

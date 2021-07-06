@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateProductoTicketTable extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -35,4 +36,5 @@ class CreateProductoTicketTable extends Migration
     {
         Schema::dropIfExists('producto_ticket');
     }
+
 }
