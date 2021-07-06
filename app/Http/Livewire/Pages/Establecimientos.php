@@ -18,6 +18,11 @@ class Establecimientos extends BaseLivewire
         return Establecimiento::paginate(1);
     }
 
+    public function cambiarCrear()
+    {
+        $this->emitUp('changeContent', 'create_establecimiento');
+    }
+
     public function render()
     {
         return view('livewire.pages.establecimientos', ['establecimientos' => $this->_getPaginatedData()]);

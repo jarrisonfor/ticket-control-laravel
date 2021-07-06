@@ -7,7 +7,7 @@
                     Exportar
                 </button>
             </div>
-            <button type="button" class="btn btn-sm btn-outline-secondary">
+            <button wire:click="cambiarCrear()" type="button" class="btn btn-sm btn-outline-secondary">
                 Añadir
             </button>
         </div>
@@ -27,7 +27,7 @@
                 @foreach ($tickets as $ticket)
                     <tr>
                         <td>{{$ticket->id}}</td>
-                        <td>{{$ticket->fechaCompra}}</td>
+                        <td>{{$ticket->fecha_compra}}</td>
                         <td>{{$ticket->establecimiento->nombre}}</td>
                         <td>
                         {{
@@ -37,7 +37,7 @@
                         }}
                         </td>
                         <td>
-                        
+
                         {{
                             number_format(
                                 $ticket->productos->sum(function ($producto) {

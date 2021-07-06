@@ -18,6 +18,11 @@ class Tickets extends BaseLivewire
         return Ticket::paginate(1);
     }
 
+    public function cambiarCrear()
+    {
+        $this->emitUp('changeContent', 'create_ticket');
+    }
+
     public function render()
     {
         return view('livewire.pages.tickets', ['tickets' => $this->_getPaginatedData()]);

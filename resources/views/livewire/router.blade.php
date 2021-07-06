@@ -19,6 +19,18 @@
                 @if($this->content == 'establecimientos')
                     <livewire:pages.establecimientos />
                 @endif
+                @if($this->content == 'create_ticket')
+                    <livewire:pages.creates.ticket />
+                @endif
+                @if($this->content == 'create_establecimiento')
+                    <livewire:pages.creates.establecimiento />
+                @endif
+                @if($this->content == 'create_persona')
+                    <livewire:pages.creates.persona />
+                @endif
+                @if($this->content == 'create_producto')
+                    <livewire:pages.creates.producto />
+                @endif
             </main>
         </div>
     </div>

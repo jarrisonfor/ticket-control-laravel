@@ -7,7 +7,7 @@
                     Exportar
                 </button>
             </div>
-            <button type="button" class="btn btn-sm btn-outline-secondary">
+            <button wire:click="cambiarCrear()" type="button" class="btn btn-sm btn-outline-secondary">
                 Añadir
             </button>
         </div>
@@ -17,7 +17,7 @@
             <div class="card" style="width: 18rem;">
                 <img src="https://static.vecteezy.com/system/resources/previews/000/566/937/non_2x/vector-person-icon.jpg" class="card-img-top" alt="{{$persona->nombre}}">
                 <div class="card-body">
-                    <h5 class="card-title">{{$persona->nombre}}</h5>
+                    <h5 class="card-title">{{$persona->id}}.{{$persona->nombre}}</h5>
                     <p class="card-text"></p>
                     <a href="#" class="btn btn-primary">Editar</a>
                     <a href="#" class="btn btn-danger">Borrar</a>

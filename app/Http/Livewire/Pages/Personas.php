@@ -18,6 +18,11 @@ class Personas extends BaseLivewire
         return Persona::paginate(1);
     }
 
+    public function cambiarCrear()
+    {
+        $this->emitUp('changeContent', 'create_persona');
+    }
+
     public function render()
     {
         return view('livewire.pages.personas', ['personas' => $this->_getPaginatedData()]);

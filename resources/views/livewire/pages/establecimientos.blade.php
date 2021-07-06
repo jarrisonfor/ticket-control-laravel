@@ -7,7 +7,7 @@
                     Exportar
                 </button>
             </div>
-            <button type="button" class="btn btn-sm btn-outline-secondary">
+            <button wire:click="cambiarCrear()" type="button" class="btn btn-sm btn-outline-secondary">
                 Añadir
             </button>
         </div>
@@ -18,7 +18,7 @@
             <div class="card" style="width: 18rem;">
                 <img src="https://siemprendes.com/wp-content/uploads/2021/01/Mi-primera-Tienda-Online.jpg" class="card-img-top" alt="{{$establecimiento->nombre}}">
                 <div class="card-body">
-                    <h5 class="card-title">{{$establecimiento->nombre}}</h5>
+                    <h5 class="card-title">{{$establecimiento->id}}.{{$establecimiento->nombre}}</h5>
                     <p class="card-text"></p>
                     <a href="#" class="btn btn-primary">Editar</a>
                     <a href="#" class="btn btn-danger">Borrar</a>

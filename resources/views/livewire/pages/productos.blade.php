@@ -7,7 +7,7 @@
                     Exportar
                 </button>
             </div>
-            <button type="button" class="btn btn-sm btn-outline-secondary">
+            <button wire:click="cambiarCrear()" type="button" class="btn btn-sm btn-outline-secondary">
                 Añadir
             </button>
         </div>

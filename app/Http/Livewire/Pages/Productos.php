@@ -18,6 +18,11 @@ class Productos extends BaseLivewire
         return Producto::paginate(1);
     }
 
+    public function cambiarCrear()
+    {
+        $this->emitUp('changeContent', 'create_producto');
+    }
+
     public function render()
     {
         return view('livewire.pages.productos', ['productos' => $this->_getPaginatedData()]);
