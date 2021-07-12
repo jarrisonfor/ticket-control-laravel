@@ -12,4 +12,6 @@ abstract class BaseModel extends Model
     use HasFactory;
     use SoftDeletes;
 
+    protected $guarded = [];
+
 }

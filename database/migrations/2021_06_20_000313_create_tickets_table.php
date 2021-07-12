@@ -17,7 +17,7 @@ class CreateTicketsTable extends Migration
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
             $table->dateTime('fecha_compra');
-            $table->dateTime('imagen');
+            $table->binary('imagen')->nullable();
             $table->foreignId('establecimiento_id')->constrained();
             $table->timestamps();
             $table->softDeletes();

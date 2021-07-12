@@ -6,6 +6,7 @@ use App\Models\Establecimiento;
 
 class EstablecimientoFactory extends BaseFactory
 {
+
     /**
      * The name of the factory's corresponding model.
      *
@@ -24,4 +25,5 @@ class EstablecimientoFactory extends BaseFactory
             $this->faker->name(),
         ];
     }
+
 }

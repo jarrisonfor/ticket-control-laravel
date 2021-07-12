@@ -6,6 +6,7 @@ use App\Models\Ticket;
 
 class TicketFactory extends BaseFactory
 {
+
     /**
      * The name of the factory's corresponding model.
      *
@@ -24,4 +25,5 @@ class TicketFactory extends BaseFactory
             $this->faker->dateTime(),
         ];
     }
+
 }

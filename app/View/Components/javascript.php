@@ -2,9 +2,9 @@
 
 namespace App\View\Components;
 
-
 class javascript extends BaseComponent
 {
+
     /**
      * Create a new component instance.
      *
@@ -12,7 +12,6 @@ class javascript extends BaseComponent
      */
     public function __construct()
     {
-        //
     }
 
     /**
@@ -24,4 +23,5 @@ class javascript extends BaseComponent
     {
         return view('components.javascript');
     }
+
 }

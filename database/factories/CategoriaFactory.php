@@ -6,6 +6,7 @@ use App\Models\Categoria;
 
 class CategoriaFactory extends BaseFactory
 {
+
     /**
      * The name of the factory's corresponding model.
      *
@@ -24,4 +25,5 @@ class CategoriaFactory extends BaseFactory
             $this->faker->name(),
         ];
     }
+
 }

@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 class ProductoSeeder extends BaseSeeder
 {
+
     /**
      * Run the database seeds.
      *
@@ -11,6 +12,6 @@ class ProductoSeeder extends BaseSeeder
      */
     public function run()
     {
-        //
     }
+
 }

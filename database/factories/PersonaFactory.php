@@ -6,6 +6,7 @@ use App\Models\Persona;
 
 class PersonaFactory extends BaseFactory
 {
+
     /**
      * The name of the factory's corresponding model.
      *
@@ -24,4 +25,5 @@ class PersonaFactory extends BaseFactory
             $this->faker->name(),
         ];
     }
+
 }

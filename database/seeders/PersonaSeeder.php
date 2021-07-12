@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 class PersonaSeeder extends BaseSeeder
 {
+
     /**
      * Run the database seeds.
      *
@@ -11,6 +12,6 @@ class PersonaSeeder extends BaseSeeder
      */
     public function run()
     {
-        //
     }
+
 }

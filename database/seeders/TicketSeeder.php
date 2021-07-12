@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 class TicketSeeder extends BaseSeeder
 {
+
     /**
      * Run the database seeds.
      *
@@ -11,6 +12,6 @@ class TicketSeeder extends BaseSeeder
      */
     public function run()
     {
-        //
     }
+
 }

@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 class DatabaseSeeder extends BaseSeeder
 {
+
     /**
      * Seed the application's database.
      *
@@ -13,4 +14,5 @@ class DatabaseSeeder extends BaseSeeder
     {
         // \App\Models\User::factory(10)->create();
     }
+
 }

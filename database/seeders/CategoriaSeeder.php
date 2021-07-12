@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 class CategoriaSeeder extends BaseSeeder
 {
+
     /**
      * Run the database seeds.
      *
@@ -11,6 +12,6 @@ class CategoriaSeeder extends BaseSeeder
      */
     public function run()
     {
-        //
     }
+
 }
