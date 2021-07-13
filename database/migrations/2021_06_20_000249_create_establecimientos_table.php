@@ -17,6 +17,7 @@ class CreateEstablecimientosTable extends Migration
         Schema::create('establecimientos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 255);
+            $table->binary('imagen')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

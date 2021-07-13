@@ -17,6 +17,7 @@ class CreatePersonasTable extends Migration
         Schema::create('personas', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 255);
+            $table->binary('imagen')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

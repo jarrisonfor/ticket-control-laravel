@@ -6,7 +6,6 @@ use App\Http\Livewire\BaseLivewire;
 
 class Sidebar extends BaseLivewire
 {
-    public $content;
 
     public function render()
     {

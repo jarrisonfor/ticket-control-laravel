@@ -1,5 +1,5 @@
 <li class="nav-item">
-    <a wire:click="change()" class="nav-link {{ ($this->active) ? 'active' : '' }}" aria-current="page" href="#">
+    <a class="nav-link {{ Route::is($this->text . '*') ? 'active' : '' }}" aria-current="page" href="{{$this->text}}">
         <span class="material-icons-outlined">{{$this->icon}}</span>
         {{ucfirst($this->text)}}
     </a>
