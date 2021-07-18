@@ -18,6 +18,8 @@ class CreateEstablecimientosTable extends Migration
             $table->id();
             $table->string('nombre', 255);
             $table->binary('imagen')->nullable();
+            $table->string('latitud')->nullable();
+            $table->string('longitud')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

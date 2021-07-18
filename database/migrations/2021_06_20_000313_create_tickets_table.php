@@ -18,6 +18,7 @@ class CreateTicketsTable extends Migration
             $table->id();
             $table->dateTime('fecha_compra');
             $table->binary('imagen')->nullable();
+            $table->string('referencia')->nullable();
             $table->foreignId('establecimiento_id')->constrained();
             $table->timestamps();
             $table->softDeletes();
