@@ -17,12 +17,13 @@ class CreateProductoTicketTable extends Migration
         Schema::create('producto_ticket', function (Blueprint $table) {
             $table->foreignId('producto_id')->constrained();
             $table->foreignId('ticket_id')->constrained();
+            $table->foreignId('persona_id')->constrained();
             $table->integer('cantidad');
             $table->decimal('precio');
             $table->boolean('oferta');
             $table->timestamps();
             $table->softDeletes();
-            $table->primary(['producto_id', 'ticket_id']);
+            $table->primary(['producto_id', 'ticket_id', 'persona_id']);
 
         });
     }
