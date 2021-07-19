@@ -17,4 +17,11 @@ class Ticket extends BaseModel
             ->withTimestamps();
     }
 
+    public function personas()
+    {
+        return $this->belongsToMany(Persona::class)
+            ->withPivot('precio', 'cantidad', 'oferta')
+            ->withTimestamps();
+    }
+
 }
