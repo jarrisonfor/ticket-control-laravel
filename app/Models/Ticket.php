@@ -19,7 +19,7 @@ class Ticket extends BaseModel
 
     public function personas()
     {
-        return $this->belongsToMany(Persona::class)
+        return $this->belongsToMany(Persona::class, 'producto_ticket')
             ->withPivot('precio', 'cantidad', 'oferta')
             ->withTimestamps();
     }

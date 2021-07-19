@@ -18,7 +18,6 @@ class CreateCategoriaProductoTable extends Migration
             $table->foreignId('categoria_id')->constrained();
             $table->foreignId('producto_id')->constrained();
             $table->timestamps();
-            $table->softDeletes();
             $table->primary(['categoria_id', 'producto_id']);
         });
     }

@@ -18,7 +18,6 @@ class CreateEstablecimientoProductoTable extends Migration
             $table->foreignId('establecimiento_id')->constrained();
             $table->foreignId('producto_id')->constrained();
             $table->timestamps();
-            $table->softDeletes();
             $table->primary(['establecimiento_id', 'producto_id']);
         });
     }

@@ -22,7 +22,6 @@ class CreateProductoTicketTable extends Migration
             $table->decimal('precio');
             $table->boolean('oferta');
             $table->timestamps();
-            $table->softDeletes();
             $table->primary(['producto_id', 'ticket_id', 'persona_id']);
 
         });
