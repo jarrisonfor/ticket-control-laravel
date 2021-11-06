@@ -7,21 +7,23 @@
                     Exportar
                 </button>
             </div>
-            <button wire:click="cambiarCrear()" type="button" class="btn btn-sm btn-outline-secondary">
+            <button wire:click="create()" type="button" class="btn btn-sm btn-outline-secondary">
                 Añadir
             </button>
         </div>
     </div>
 
-    <div class="cartas">
+    <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
         @foreach ($establecimientos as $establecimiento)
-            <div class="card" style="width: 18rem;">
-                <img src="https://siemprendes.com/wp-content/uploads/2021/01/Mi-primera-Tienda-Online.jpg" class="card-img-top" alt="{{$establecimiento->nombre}}">
-                <div class="card-body">
-                    <h5 class="card-title">{{$establecimiento->id}}.{{$establecimiento->nombre}}</h5>
-                    <p class="card-text"></p>
-                    <a href="#" class="btn btn-primary">Editar</a>
-                    <a href="#" class="btn btn-danger">Borrar</a>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{$establecimiento->imagen ?: 'https://siemprendes.com/wp-content/uploads/2021/01/Mi-primera-Tienda-Online.jpg'}}" class="card-img-top" alt="{{$establecimiento->nombre}}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{$establecimiento->id}}. {{$establecimiento->nombre}}</h5>
+                        <p class="card-text"></p>
+                        <button wire:click="edit({{$establecimiento->id}})" class="btn btn-primary">Editar</button>
+                        <button wire:click="delete({{$establecimiento->id}})" class="btn btn-danger">Borrar</button>
+                    </div>
                 </div>
             </div>
         @endforeach

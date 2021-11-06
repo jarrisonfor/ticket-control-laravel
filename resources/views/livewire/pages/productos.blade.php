@@ -7,7 +7,7 @@
                     Exportar
                 </button>
             </div>
-            <button wire:click="cambiarCrear()" type="button" class="btn btn-sm btn-outline-secondary">
+            <button wire:click="create()" type="button" class="btn btn-sm btn-outline-secondary">
                 Añadir
             </button>
         </div>
@@ -18,7 +18,6 @@
                 <tr>
                     <th scope="col">Id</th>
                     <th scope="col">Nombre</th>
-                    <th scope="col">Categoria</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,7 +25,6 @@
                     <tr>
                         <td>{{$producto->id}}</td>
                         <td>{{$producto->nombre}}</td>
-                        <td>{{$producto->categoria->nombre}}</td>
                     </tr>
                 @endforeach
             </tbody>

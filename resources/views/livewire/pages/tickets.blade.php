@@ -7,7 +7,7 @@
                     Exportar
                 </button>
             </div>
-            <button wire:click="cambiarCrear()" type="button" class="btn btn-sm btn-outline-secondary">
+            <button wire:click="create()" type="button" class="btn btn-sm btn-outline-secondary">
                 Añadir
             </button>
         </div>
@@ -21,6 +21,7 @@
                     <th scope="col">Establecimiento</th>
                     <th scope="col">Nº Productos</th>
                     <th scope="col">P. Total</th>
+                    <th scope="col">Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -37,17 +38,21 @@
                         }}
                         </td>
                         <td>
-
                         {{
                             number_format(
                                 $ticket->productos->sum(function ($producto) {
-                                    return $producto->pivot->precio;
+                                    return $producto->pivot->precio * $producto->pivot->cantidad;
                                 }),
                                 2,
                                 ',',
                                 '.'
                             )
                         }}€
+                        </td>
+                        <td>
+                            <button wire:click="edit({{$ticket->id}})" type="button" class="btn btn-sm btn-outline-primary">
+                                Editar
+                            </button>
                         </td>
                     </tr>
                 @endforeach

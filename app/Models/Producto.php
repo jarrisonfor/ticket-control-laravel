@@ -13,14 +13,14 @@ class Producto extends BaseModel
     public function tickets()
     {
         return $this->belongsToMany(Ticket::class)
-            ->withPivot('precio', 'cantidad', 'oferta')
+            ->withPivot('precio', 'cantidad', 'oferta', 'persona_id')
             ->withTimestamps();
     }
 
     public function personas()
     {
         return $this->belongsToMany(Persona::class, 'producto_ticket')
-            ->withPivot('precio', 'cantidad', 'oferta')
+            ->withPivot('precio', 'cantidad', 'oferta', 'ticket_id')
             ->withTimestamps();
     }
 
